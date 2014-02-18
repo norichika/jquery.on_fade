@@ -14,7 +14,7 @@
 				var $this = $(this);
 
 				// RollOver Method
-				$this.on("mouseenter.on_rollover mouseleave.on_rollover", opts.overObj, function(event){
+				$this.on("mouseenter.on_fade mouseleave.on_fade", opts.overObj, function(event){
 					if (event.type === 'mouseenter') {
 						$(this).stop(true, false).fadeTo(opts.overTime, opts.overOpacity, opts.overEasing);
 					} else {
@@ -36,8 +36,8 @@
 	};
 	$.fn.on_fade.defaults = {
 			overObj: ".imgfade",
-			overEasing: "easeInOutCirc",
-			overTime: "800",
+			overEasing: "swing",
+			overTime: "500",
 			overOpacity: "0.8"
 	};
 })(jQuery);
